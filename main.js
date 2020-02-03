@@ -1,69 +1,56 @@
-document.getElementById("bouticon").addEventListener("click",()=>{
-    document.getElementById("iconset").classList.toggle("iconset2");
-    document.getElementById("bouticon").classList.toggle("bouticon2");
-    document.getElementById("slide1").classList.toggle("slidemast1")
-    document.getElementById("slide2").classList.toggle("slidemast2")
-    document.getElementById("slide3").classList.toggle("slidemast3")
-    document.getElementById("slide1").classList.remove("mastermaster");
-    
+iconset1 = document.getElementById("iconset1");
+iconset2 = document.getElementById("iconset2");
+iconset3 = document.getElementById("iconset3");
+iconset4 = document.getElementById("iconset4");
+let nul = false;
+iconset1.addEventListener("click", () => {
+    toggledisplay("content1",iconset1,"iconset1",iconset2,iconset3,iconset4,"pn1")
 })
-let prez = false;
-document.getElementById("slide1").addEventListener("click",()=>{
+iconset2.addEventListener("click", () => {
+    toggledisplay("content2",iconset2,"iconset2",iconset1,iconset3,iconset4,"pn2")
 
-    if(prez === false){
-        document.getElementById("slide1").classList.toggle("mastermaster1");
-        document.getElementById("slide2").classList.toggle("opac");
-        document.getElementById("slide3").classList.toggle("opac");
-        prez = true;
-        console.log("salope")
-        document.getElementById("")
-    }
-    else{
+})
+iconset3.addEventListener("click", () => {
+    toggledisplay("content3",iconset3,"iconset3",iconset1,iconset2,iconset4,"pn3")
 
-        setTimeout(() => {
-            document.getElementById("slide1").classList.toggle("mastermaster1");
-        }, 500);
-        setTimeout(() => {
-            document.getElementById("slide2").classList.toggle("opac");
-            document.getElementById("slide3").classList.toggle("opac");
-        }, 500);
-        console.log("pute")
-
-        prez = false;
-    }
+})
+iconset4.addEventListener("click", () => {
+    toggledisplay("content4",iconset4,"iconset4",iconset1,iconset3,iconset2,"pn4")
 })
 
-document.getElementById("slide2").addEventListener("click",()=>{
 
-    if(prez === false){
-        document.getElementById("slide2").classList.toggle("mastermaster2");
-        document.getElementById("slide1").classList.toggle("opac");
-        document.getElementById("slide3").classList.toggle("opac");
-        prez = true;
-    }
-    else{
-        document.getElementById("slide2").classList.toggle("mastermaster2");
-        setTimeout(() => {
-            document.getElementById("slide1").classList.toggle("opac");
-            document.getElementById("slide3").classList.toggle("opac");
-        }, 500);
-        prez = false;
-    }
-})
-document.getElementById("slide3").addEventListener("click",()=>{
 
-    if(prez === false){
-        document.getElementById("slide3").classList.toggle("mastermaster3");
-        document.getElementById("slide1").classList.toggle("opac");
-        document.getElementById("slide2").classList.toggle("opac");
-        prez = true;
-    }
-    else{
-        document.getElementById("slide3").classList.toggle("mastermaster3");
+
+function toggledisplay(content,iconset,iconsetstring,icondel1,icondel2,icondel3,pnnum) {
+    if (nul === false) {
+        setTimeout(() => {noner(content)}, 500);
+
+        toggler(iconset, iconsetstring)
+        unclicker(icondel1, icondel2, icondel3);
+        noner(pnnum);
+        nul = true;
+    } else {
+        noner(content)
         setTimeout(() => {
-            document.getElementById("slide1").classList.toggle("opac");
-            document.getElementById("slide2").classList.toggle("opac");
-        }, 500);
-        prez = false;
+
+            toggler(iconset,iconsetstring)
+            unclicker(icondel1, icondel2, icondel3);
+            noner(pnnum);
+        }, 1);
+        nul = false;
     }
-})
+}
+
+function toggler(classset, string) {
+    classset.classList.toggle(string);
+}
+
+function unclicker(setname1, setname2, setname3) {
+    setname1.classList.toggle("unclick");
+    setname2.classList.toggle("unclick");
+    setname3.classList.toggle("unclick");
+}
+
+function noner(name) {
+    document.getElementById(name).classList.toggle("none");
+}
