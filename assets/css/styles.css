@@ -2,6 +2,13 @@ body {
   margin: 0;
 }
 
+p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .background {
   width: 400px;
   height: 100vh;
@@ -61,6 +68,15 @@ body {
   position: relative;
   top: 30%;
   right: -60px;
+}
+
+#content {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  display: none;
+  z-index: 2;
+  width: 80%;
+  height: 300px;
 }
 
 #slide1, #slide2, #slide3 {
