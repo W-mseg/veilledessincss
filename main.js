@@ -5,17 +5,19 @@ iconset4 = document.getElementById("iconset4");
 let nul = false;
 iconset1.addEventListener("click", () => {
     toggledisplay("content1",iconset1,"iconset1",iconset2,iconset3,iconset4,"pn1")
+    document.getElementById("imageslide1").classList.toggle("imageslide");
 })
 iconset2.addEventListener("click", () => {
     toggledisplay("content2",iconset2,"iconset2",iconset1,iconset3,iconset4,"pn2")
-
+    document.getElementById("imageslide2").classList.toggle("imageslide");
 })
 iconset3.addEventListener("click", () => {
     toggledisplay("content3",iconset3,"iconset3",iconset1,iconset2,iconset4,"pn3")
-
+    document.getElementById("imageslide3").classList.toggle("imageslide");
 })
 iconset4.addEventListener("click", () => {
     toggledisplay("content4",iconset4,"iconset4",iconset1,iconset3,iconset2,"pn4")
+    document.getElementById("imageslide4").classList.toggle("imageslide");
 })
 
 
