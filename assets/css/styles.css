@@ -197,6 +197,10 @@ embed {
   transition: ease-in-out 0.5s;
 }
 
+#emb5 {
+  width: 800px;
+}
+
 #loader {
   width: 6em;
   height: 2em;
@@ -269,5 +273,21 @@ embed {
 #loader5 p {
   margin-top: -9.8%;
   color: black;
+}
+
+#codepen {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border: solid white;
+  border-radius: 15px;
+  position: absolute;
+  top: 85%;
+  left: 20%;
+}
+
+#codepen img {
+  width: 80px;
+  border-radius: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

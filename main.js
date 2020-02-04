@@ -66,7 +66,7 @@ document.getElementById("loader5").addEventListener("mouseenter",()=>{
     document.getElementById("emb3").classList.add("imageslide");
     document.getElementById("emb4").classList.add("imageslide");
     document.getElementById("emb5").classList.toggle("imageslide");
-    document.getElementById("emb5").src = "https://cdn.vox-cdn.com/thumbor/ARxCeomEtL6TJRUABLra2qkz-I4=/0x0:575x232/1200x800/filters:focal(242x70:334x162):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/52359021/giphy.0.gif"
+    document.getElementById("emb5").src = "ressources/1nokx8 (2).gif"
 })
 function toggledisplay(content,iconset,iconsetstring,icondel1,icondel2,icondel3,pnnum) {
     if (nul === false) {
