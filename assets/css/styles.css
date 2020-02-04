@@ -177,6 +177,28 @@ h2 {
 #imageslide3 {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  margin-left: 20%;
+  margin-left: 40%;
+}
+
+.content2 ul {
+  font-size: xx-large;
+}
+
+.content3 p {
+  font-size: x-large;
+  margin-left: 10%;
+  margin-top: -3%;
+}
+
+#emb1 {
+  width: 821px;
+  height: 600px;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+button {
+  width: 6em;
+  height: 3em;
 }
 /*# sourceMappingURL=styles.css.map */

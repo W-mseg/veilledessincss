@@ -17,9 +17,13 @@ iconset3.addEventListener("click", () => {
 })
 iconset4.addEventListener("click", () => {
     toggledisplay("content4",iconset4,"iconset4",iconset1,iconset3,iconset2,"pn4")
-    document.getElementById("imageslide4").classList.toggle("imageslide");
+    document.getElementById("emb1").classList.toggle("imageslide");
+    iconset4.classList.toggle("unclick");
 })
-
+document.getElementById("loader").addEventListener("click",()=>{
+    console.log("test")
+    document.getElementById("emb1").src = "https://codepen.io/thebabydino/full/PowrPGR"
+})
 
 
 
