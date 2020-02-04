@@ -17,16 +17,57 @@ iconset3.addEventListener("click", () => {
 })
 iconset4.addEventListener("click", () => {
     toggledisplay("content4",iconset4,"iconset4",iconset1,iconset3,iconset2,"pn4")
-    document.getElementById("emb1").classList.toggle("imageslide");
-    iconset4.classList.toggle("unclick");
+    document.getElementById("emb1").classList.add("imageslide");
+    document.getElementById("emb2").classList.add("imageslide");
+    document.getElementById("emb3").classList.add("imageslide");
+    document.getElementById("emb4").classList.add("imageslide");
+    document.getElementById("emb5").classList.add("imageslide");
+
+
 })
-document.getElementById("loader").addEventListener("click",()=>{
+document.getElementById("loader").addEventListener("mouseenter",()=>{
     console.log("test")
+    document.getElementById("emb2").classList.add("imageslide");
+    document.getElementById("emb3").classList.add("imageslide");
+    document.getElementById("emb1").classList.toggle("imageslide");
+    document.getElementById("emb5").classList.add("imageslide");
+    document.getElementById("emb4").classList.add("imageslide");
+
     document.getElementById("emb1").src = "https://codepen.io/thebabydino/full/PowrPGR"
 })
+document.getElementById("loader2").addEventListener("mouseenter",()=>{
+    document.getElementById("emb1").classList.add("imageslide");
+    document.getElementById("emb3").classList.add("imageslide");
+    document.getElementById("emb2").classList.toggle("imageslide");
+    document.getElementById("emb5").classList.add("imageslide");
+    document.getElementById("emb4").classList.add("imageslide");
 
-
-
+    document.getElementById("emb2").src = "https://codepen.io/heero/full/wylhv"
+})
+document.getElementById("loader3").addEventListener("mouseenter",()=>{
+    document.getElementById("emb1").classList.add("imageslide");
+    document.getElementById("emb2").classList.add("imageslide");
+    document.getElementById("emb3").classList.toggle("imageslide");
+    document.getElementById("emb5").classList.add("imageslide");
+    document.getElementById("emb4").classList.add("imageslide");
+    document.getElementById("emb3").src = "https://codepen.io/jlwebart/full/JDHne";
+})
+document.getElementById("loader4").addEventListener("mouseenter",() =>{
+    document.getElementById("emb1").classList.add("imageslide");
+    document.getElementById("emb2").classList.add("imageslide");
+    document.getElementById("emb3").classList.add("imageslide");
+    document.getElementById("emb5").classList.add("imageslide");
+    document.getElementById("emb4").classList.toggle("imageslide");
+    document.getElementById("emb4").src = "https://codepen.io/finnhvman/full/xXpzVN";
+})
+document.getElementById("loader5").addEventListener("mouseenter",()=>{
+    document.getElementById("emb1").classList.add("imageslide");
+    document.getElementById("emb2").classList.add("imageslide");
+    document.getElementById("emb3").classList.add("imageslide");
+    document.getElementById("emb4").classList.add("imageslide");
+    document.getElementById("emb5").classList.toggle("imageslide");
+    document.getElementById("emb5").src = "http://img.over-blog-kiwi.com/0/98/03/83/20150704/ob_d37987_5n94fbwm.gif"
+})
 function toggledisplay(content,iconset,iconsetstring,icondel1,icondel2,icondel3,pnnum) {
     if (nul === false) {
         setTimeout(() => {noner(content)}, 500);
